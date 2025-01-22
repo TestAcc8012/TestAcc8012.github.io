@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown & Crawford Advisory - Home</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header class="overlay-header animate__animated animate__fadeInDown">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="static/images/Logo.png" alt="Brown & Crawford Advisory">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html" class="contact-btn">Meet the Team</a></li>
+                </ul>
+                <div class="hamburger">
+                    <img src="static/images/menu.png" alt="Menu Icon">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <img src="static/images/header-image.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h1 class="hero-title animate__animated animate__fadeInLeft">B&G</h1>
+                <p class="hero-subtitle animate__animated animate__fadeInLeft animate__delay-1s">CONSTRUCTION LAW</p>
+                <div class="yellow-box animate__animated animate__fadeInLeft animate__delay-2s">
+                    <p>Building on a foundation of excellence.</p>
+                </div>
+            </div>
+            <div class="learn-more-container animate__animated animate__fadeInUp animate__delay-3s">
+                <p class="learn-more-text">Learn More</p>
+                <img src="static/images/arrow.png" alt="Arrow Down" class="learn-more-arrow">
+            </div>
+        </section>           
+        
+        <!-- Page Overhang Section -->
+        <section id="about" class="page-overhang animate__animated animate__fadeInUp">
+            <div class="overhang-content">
+                <div class="overhang-contact-grid">
+                    <div class="info-item">
+                        <img src="static/images/phone.png" alt="Phone Icon">
+                        <div>
+                            <strong>Phone:</strong>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="static/images/mail.png" alt="Email Icon">
+                        <div>
+                            <strong>Email:</strong>
+                            <p>info@notaryservice.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="static/images/location.png" alt="Location Icon">
+                        <div>
+                            <strong>Office:</strong>
+                            <p>123 Main St, City, State</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="static/images/clock.png" alt="Clock Icon">
+                        <div>
+                            <strong>Hours:</strong>
+                            <p>Monday-Friday: 9 AM - 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+
+    <footer class="animate__animated animate__fadeInUp">
+        <div class="footer-container">
+            <p>&copy; 2025 Brown & Crawford Advisory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+    <script>
+        // Initialize animations for elements
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate__fadeInUp");
+                    }
+                });
+            });
+
+            document.querySelectorAll(".animate__animated").forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
