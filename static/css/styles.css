@@ -322,14 +322,17 @@ footer {
 .learn-more-container {
     position: absolute;
     bottom: 100px; /* Height above the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure perfect centering */
-    text-align: center;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    padding-left: 0px; /* Remove extra padding */
+    padding-right: 0px; /* Remove extra padding */
+    text-align: center; /* Center content horizontally */
     z-index: 3; /* Ensure it appears above the image and overlay */
     cursor: pointer; /* Make the entire area clickable */
-    padding: 20px; /* Add space around the text and arrow for easier clicking */
+    border-right-style: solid; /* Add right border */
+    border-right-width: 0px; /* Set right border width */
     border-radius: 10px; /* Smooth corners for the clickable area */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
 .learn-more-text {
